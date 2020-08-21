@@ -1,0 +1,14 @@
+.some-class {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  body {
+    background-color: whitesmoke;
+    font-family: 'Cantata One', serif;
+    font-size: 16px;
+    line-height: 1;
+  }
