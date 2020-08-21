@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/style.css" />
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
+    <div class="container-fluid">
+
+        <header class="row header">
+            <h1 class="col-sm-12 display-3 mt-4">Weather Dashboard</h1>
+
+            <h3 id="headersub">the simple weather app</h3>
+        </header>
+        <main>
+
+
+            <div class="row ">
+                <div class="col-sm-4 justify-content-left ml-2 sidebar mt-3">
+
+                    <form class="form-inline mt-4">
+                        <h3 class="ml-3">Search for your city:</h3>
+                        <nav class="navbar navbar-light bg-light">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                                <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </nav>
+                    </form>
+                    <div class="list-group mt-4">
+                        <button type="button" class="list-group-item list-group-item-action">
+                            Austin
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action">Chicago</button>
+                        <button type="button" class="list-group-item list-group-item-action">New York</button>
+                        <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
+                        <button type="button" class="list-group-item list-group-item-action active">Manila</button>
+                        <button type="button" class="list-group-item list-group-item-action">San Francisco</button>
+                        <button type="button" class="list-group-item list-group-item-action">Tawian</button>
+                        <button type="button" class="list-group-item list-group-item-action">Osaka</button>
+                        <button type="button" class="list-group-item list-group-item-action">Frankfurt</button>
+                    </div>
+                </div>
+                
+                <div class="col-sm-7" id="maindisplay">
+
+                    <div class="display-group ml-1 mt-3 border">
+                        <h2 id="citydisplay" class="my-3 ml-2">Austin</h2>
+                        <br>
+                        <br>
+                        <h5 id="tempdisplay" class="ml-2">temperature:</h5>
+                        <br>
+                        <h5 id="humiditydisplay" class="ml-2">humidity:</h5>
+                        <br>
+                        <h5 id="winddisplay" class="ml-2">Wind Speed:</h5>
+                        <br>
+                        <h5 id="uvdisplay" class="ml-2 mb-5">UV index:</h5>
+                    </div>
+                    <div class="mt-4" id="forecast">
+                        
+                        <h2>5-day Forecast</h2>
+                        <div class="justify-content-left d-flex flex-nowrap">
+                            <img src="https://via.placeholder.com/150" class="rounded mx-1" alt="...">
+                            <img src="https://via.placeholder.com/150" class="rounded mx-1" alt="...">
+                            <img src="https://via.placeholder.com/150" class="rounded mx-1" alt="...">
+                            <img src="https://via.placeholder.com/150" class="rounded mx-1" alt="...">
+                            <img src="https://via.placeholder.com/150" class="rounded mx-1" alt="...">
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+
+
+    </div>
+
+    </div>
 
 
 
@@ -19,21 +95,24 @@
 
 
 
+    <!-- Footer Section -->
 
-     <!-- Footer Section -->
+    <div class="fixed-bottom footer">...
+        <footer class="footer-dark bg-dark">
+            <div class="container">
+                <span class="text-light">© Nay Wilkins.</span>
+            </div>
+        </footer>
+    </div>
+    </div>
 
-  <div class="fixed-bottom footer">...
-    <footer class="footer-dark bg-dark">
-      <div class="container">
-        <span class="text-light">© Nay Wilkins.</span>
-      </div>
-    </footer>
-  </div>
+    </main>
 
-  <!-- End Footer -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-  <script src="./Assets/script.js"></script>
-    
+    <!-- End Footer -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./Assets/script.js"></script>
+    </div>
 </body>
+
 </html>

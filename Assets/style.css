@@ -1,4 +1,5 @@
-.some-class {
+.search {
+    
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
@@ -6,9 +7,40 @@
     text-align: center;
   }
 
+  header {
+    
+    font-family: 'Cantata One', serif;
+    background-color: #75B8BF;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #headersub {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+
   body {
-    background-color: whitesmoke;
     font-family: 'Cantata One', serif;
     font-size: 16px;
     line-height: 1;
+    background-color: white;
   }
+
+  .sidebar {
+    font-family: 'Raleway', sans-serif;
+      background-color: #D7D9D8;
+  }
+
+  .display-group {
+    font-family: 'Raleway', sans-serif;
+
+  }
+
+  #citydisplay {
+    font-family: 'Cantata One', serif;
+  }
+
+
