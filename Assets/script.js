@@ -1,7 +1,6 @@
 $("#searchedCityBtn").on("click", function(event) {
 
-    // event.preventDefault() can be used to prevent an event's default behavior.
-    // Here, it prevents the submit button from trying to submit a form when clicked
+
     event.preventDefault();
 
     // Here we grab the text from the input box
@@ -9,9 +8,8 @@ $("#searchedCityBtn").on("click", function(event) {
 
     // Here we construct our URL
     
-// let APIKey = "&appid=78e6c921cefb9a49851564e781798bb6"
 let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=78e6c921cefb9a49851564e781798bb6"
-
+let queryURL2 = " " + city + "&appid=78e6c921cefb9a49851564e781798bb6"
 
 
     $.ajax({
@@ -19,8 +17,23 @@ let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&a
       method: "GET"
     })
     .then(function(response) {
-        console.log(queryURL)
-        console.log(response)
-      $("#citydisplay").text(city);
-    });
+       
+      $("#cityDisplay").text(city);
+      let tempF = Math.round((response.main.temp - 273.15) * 1.80 + 32);
+      $("#tempDisplay").text("Temperature: " + tempF);
+      $("#humidityDisplay").text("Humidity: " + response.main.humidity);
+      $("#windDisplay").text("Wind: " + response.main.humidity);
+      
+   
 })
+
+
+$.ajax({
+    url: queryURL2,
+    method: "GET"
+  })
+  .then(function(response) {
+ //   $("uvDisplay").text("UV: " + response.main.uv)
+});
+
+  })
