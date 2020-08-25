@@ -56,6 +56,7 @@ $("#searchedCityBtn").on("click", function (event) {
                     };
 
 // 5 day forecast loop
+                $("#5dayForecast").empty()
 
                     for (let i = 1; i < 6; i++) {
                         let forecastDiv = $("<div>");
@@ -64,10 +65,9 @@ $("#searchedCityBtn").on("click", function (event) {
                         let br = $("<br>");
                         let br2 = $("<br>");
                         let list = $("<ul></ul>")
-                        let templi = $("<p></p>").text(response.daily[i].temp.max)
+                        let templi = $("<p></p>").text(Math.round(response.daily[i].temp.max))
                         let li2 = $("<p></p>").text(response.daily[i].weather[0].description)
                         let li3 = $("<img></img>")
-
                         li3.attr("src", "http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png")
 
 
@@ -81,8 +81,8 @@ $("#searchedCityBtn").on("click", function (event) {
         })
 });
 
-//figure out why it keeps appending.look into html method. why is html only adding one?
-// make weather icon appear in main window. look above for jquery appending.
-// save search bar values to local storage
+//figure out why it keeps appending.look into html method. why is html only adding one? COMPLETE
+// make weather icon appear in main window. look above for jquery appending. COMPLETE
+// save search bar values to local storage  
 // make sidebar value text pull from local storage and appear in sidebar
 //make sidebar values clickable in a way that would run the function
