@@ -1,12 +1,13 @@
+
 //array to hold local storage of cities
 
-let cityArr = JSON.parse(localStorage.getItem("cityArr")) || []
+let cityArr = []
 
+init()
 
 // day array to change dt code to day
 
 let dayArray = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
-
 
 //main search button function
 
@@ -85,8 +86,7 @@ $("#searchedCityBtn").on("click", function (event) {
                     sidebutton.addClass("sidebar list-group-item list-group-item-action")
                     sidebutton.text(city)
                     $(".sidebarbuttons").append(sidebutton)
-                    localStorage.empty()
-                    cityArr.push({ city });
+                    cityArr.unshift({ city });
                     localStorage.setItem("cityArr", JSON.stringify(cityArr));
 
                     console.log(cityArr)
@@ -96,13 +96,29 @@ $("#searchedCityBtn").on("click", function (event) {
 });
 
 
+function init() {
+    // Get stored cities from localStorage
+    // Parsing the JSON string to an object
+    var storedCities = JSON.parse(localStorage.getItem("cityArr"));
+
+    // If cities were retrieved from localStorage, update the cities array to it
+    if (storedCities !== null) {
+        cityArr = storedCities;
+    }
+    $(".sidebarbuttons").append(storedCities)
+    
+}
 
 
-//figure out why it keeps appending.look into html method. why is html only adding one? COMPLETE
-// make weather icon appear in main window. look above for jquery appending. COMPLETE
-// save search bar values to local storage  
+
+
+
+//figure out why it keeps appending.look into html method. why is html only adding one?     COMPLETE
+// make weather icon appear in main window. look above for jquery appending.                 COMPLETE
+// save search bar values to local storage                                                   COMPLETE
 // make sidebar value text pull from local storage and appear in sidebar
 //make sidebar values clickable in a way that would run the function
+// make buttons individual columns
 
 
 // $(".sidebar").each(function () {
