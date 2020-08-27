@@ -26,23 +26,30 @@
     font-family: 'Cantata One', serif;
     font-size: 16px;
     line-height: 1;
-    background-color: white;
+    background-color: #006d77;
   }
 
   .sidebar2 {
     font-family: 'Raleway', sans-serif;
-      background-color: #D7D9D8;
+      background-color: #edf6f9;
   }
 
   .display-group {
     font-family: 'Raleway', sans-serif;
-
+    background-color: #ffddd2;
   }
 
   #citydisplay {
     font-family: 'Cantata One', serif;
+    
   }
 
 .designer {
   font-family: 'Cantata One', serif;
+
+}
+
+
+.Forecastdiv {
+  background-color: #ffddd2;
 }

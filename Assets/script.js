@@ -56,9 +56,9 @@ $("#searchedCityBtn").on("click", function (event) {
                     if (response.current.uvi <= 6) {
                         $("#uvDisplay").css("background-color", "lightgreen")
                     } else if (response.current.uvi <= 10) {
-                        $("#uvDisplay").css("background-color", "orange")
+                        $("#uvDisplay").css("background-color", "#f28f3b")
                     } else if (response.current.uvi >= 11) {
-                        ($("#uvDisplay").css("background-color", "red"))
+                        ($("#uvDisplay").css("background-color", "#bc4749"))
                     };
 
                     // 5 day forecast loop
@@ -89,7 +89,7 @@ $("#searchedCityBtn").on("click", function (event) {
                     $(".sidebarbuttons").append(sidebutton)
                     cityArr.unshift({ city });
                     localStorage.setItem("cityArr", JSON.stringify(cityArr));
-                    cityArr.length = 0;
+                    $(".sidebarbuttons").empty()
                     init()
                     
 
@@ -107,6 +107,7 @@ function init() {
     if (storedCities !== null) {
         cityArr = storedCities
     } else return;
+    $(".sidebarbuttons").empty()
     for (let i = 0; i < storedCities.length; i++) {
 
         let sidebutton2 = $("<button>")
@@ -162,9 +163,9 @@ function init() {
                             if (response.current.uvi <= 6) {
                                 $("#uvDisplay").css("background-color", "lightgreen")
                             } else if (response.current.uvi <= 10) {
-                                $("#uvDisplay").css("background-color", "orange")
+                                $("#uvDisplay").css("background-color", "#f28f3b")
                             } else if (response.current.uvi >= 11) {
-                                ($("#uvDisplay").css("background-color", "red"))
+                                ($("#uvDisplay").css("background-color", "#bc4749"))
                             };
 
                             // 5 day forecast loop
